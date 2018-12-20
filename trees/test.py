@@ -1,4 +1,4 @@
-import shannon
+import my_decision_tree
 import tree_plotter
 from sklearn import tree
 
@@ -6,7 +6,7 @@ if __name__ == '__main__':
     fr = open('lenses.txt')
     lenses = [inst.strip().split('\t') for inst in fr.readlines()]
     lenses_labels = ['age', 'prescript', 'astigmatic', 'tear_rate']
-    lenses_tree = shannon.createTree(lenses, lenses_labels)
+    lenses_tree = my_decision_tree.createTree(lenses, lenses_labels)
     print(lenses_tree)
     tree_plotter.createPlot(lenses_tree)
 
